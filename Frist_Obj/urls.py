@@ -17,8 +17,13 @@ from django.contrib import admin
 from django.conf.urls import url
 from django.urls import path
 from . import view
+from . import search
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
-    url(r'^$', view.hello),
+    # url(r'^$', view.hello),
+    url(r'^$', search.search_form),
+    url(r'^search-form$', search.search_form),
+    url(r'^search$', search.search),
+    url(r'^ceshi$', search.search_form),
 ]
